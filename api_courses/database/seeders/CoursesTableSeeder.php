@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Factories\CourseFactory;
 use Illuminate\Database\Seeder;
 
 class CoursesTableSeeder extends Seeder
@@ -12,6 +12,6 @@ class CoursesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        CourseFactory::factory(\App\Course::class, 10)->create();
     }
 }
